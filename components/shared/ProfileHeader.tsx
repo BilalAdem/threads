@@ -1,12 +1,5 @@
 import Image from 'next/image';
 
-interface Props {
-    id: string;
-    currentUserId: string;
-    parentId: string | null;
-    content: string;
-}
-
 const ProfileHeader = (
     {
         accountId,
@@ -15,6 +8,7 @@ const ProfileHeader = (
         name,
         imagUrl,
         bio,
+        type
     } : {
         accountId: string;
         authUserId: string;
@@ -22,6 +16,7 @@ const ProfileHeader = (
         name: string;
         imagUrl: string;
         bio: string;
+        type?: string;
     } 
     ) => {
   return (
